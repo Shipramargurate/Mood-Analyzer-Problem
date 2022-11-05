@@ -1,17 +1,21 @@
 package com.bridgelabz.moodAnalyzer;
 
 public class MoodAnalyzer {
+	String message;
 
-	// creating method named moodCheck having string return type and passing
-	// parameter of string type
+	   // creating constructor
+	    public MoodAnalyzer(String message) {
+	        this.message = message;
+	    }
 
-	public String moodCheck(String message) {
-		if (message.contains("SAD")) {
-			System.out.println("In sad mood");
-			return "SAD";
-		} else {
-			System.out.println("In happy mood");
-			return "HAPPY";
-		}
+	    public String moodCheck(){
+	        if(message.contains("SAD")){
+	            System.out.println("In sad mood");
+	            return "SAD";
+	        }
+	        else{
+	            System.out.println("In happy mood");
+	            return "HAPPY";
+	        }
+	    }
 	}
-}
