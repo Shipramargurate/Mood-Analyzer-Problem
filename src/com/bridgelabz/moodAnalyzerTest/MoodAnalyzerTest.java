@@ -6,14 +6,13 @@ import org.junit.jupiter.api.Test;
 import com.bridgelabz.moodAnalyzer.MoodAnalyzer;
 
 public class MoodAnalyzerTest {
+	MoodAnalyzer moodAnalyze = new MoodAnalyzer();
 
-    MoodAnalyzer moodAnalyze = new MoodAnalyzer();
-
-    @Test
-    public void if_MessageWasSad_ShouldReturnSad(){
-        String message = " I am in SAD mood ";
-        String mood = moodAnalyze.moodCheck(message);
-        Assertions.assertEquals("SAD", mood);
-    }
+	@Test
+	public void if_MessageWasSad_ShouldReturnSad() {
+		String message = " I am in ANY mood ";
+		String mood = moodAnalyze.moodCheck(message);
+		Assertions.assertEquals("HAPPY", mood);
+	}
 
 }
