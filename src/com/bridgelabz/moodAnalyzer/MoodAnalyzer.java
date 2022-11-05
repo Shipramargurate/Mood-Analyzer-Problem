@@ -3,19 +3,24 @@ package com.bridgelabz.moodAnalyzer;
 public class MoodAnalyzer {
 	String message;
 
-	   // creating constructor
-	    public MoodAnalyzer(String message) {
-	        this.message = message;
-	    }
-
-	    public String moodCheck(){
-	        if(message.contains("SAD")){
-	            System.out.println("In sad mood");
-	            return "SAD";
-	        }
-	        else{
-	            System.out.println("In happy mood");
-	            return "HAPPY";
-	        }
-	    }
+	// creating constructor
+	public MoodAnalyzer(String message) {
+		this.message = message;
 	}
+	/*
+	 * creating method to check mood by passing string type message parameter try
+	 * and catch blocks will be used for exception handling
+	 */
+	public String moodCheck() {
+		try {
+			if (message.contains("SAD")) {
+				return "SAD";
+			} else {
+				return "HAPPY";
+			}
+		} catch (Exception exception) {
+			return "HAPPY";
+		}
+	}
+
+}
